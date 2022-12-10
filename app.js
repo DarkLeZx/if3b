@@ -19,6 +19,9 @@ const authRoutes = require('./routes/auth')
 // (8) app.use (mendaftarkan middleware baru ke Express)
 app.use('/mahasiswa', mahasiswaRoutes)
 app.use('/auth',authRoutes)
+app.get("/",(req, res) => {
+    res.send("KAMU CANTIKK")
+})
 
 // (3) koneksi ke database mongodb
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
